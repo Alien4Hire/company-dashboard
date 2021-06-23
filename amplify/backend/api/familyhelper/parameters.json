@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "familyhelper",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authfamilyhelper9a0b4b7b",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
