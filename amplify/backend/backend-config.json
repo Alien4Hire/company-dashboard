@@ -1,6 +1,6 @@
 {
   "auth": {
-    "familyhelper9a0b4b7b": {
+    "familyhelper33118859": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -16,12 +16,18 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authfamilyhelper9a0b4b7b"
+              "userPoolId": "authfamilyhelper33118859"
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
+    }
+  },
+  "storage": {
+    "familyHelperBucket": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
     }
   }
 }

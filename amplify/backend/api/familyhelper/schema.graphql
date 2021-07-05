@@ -1,21 +1,28 @@
-type List @model {
+type List
+  @model
+  @searchable
+  @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
   id: ID!
   title: String!
   description: String
-  listItems: [ListItem] @connection(name:"ListListItems")
+  imageKey: String
+  slug: String!
+  listItems: [ListItem] @connection(name: "ListListItems")
 }
 
-type ListItem @model {
+type ListItem
+  @model
+  @auth(rules: [{ allow: owner, operations: [create, delete, update, read] }]) {
   id: ID!
   title: String!
   quantity: Int
   done: Boolean
-  list: List @connection(name:"ListListItems")
-  actions: [Action] @connection(name:"ListItemAction")
+  list: List @connection(name: "ListListItems")
+  actions: [Action] @connection(name: "ListItemAction")
 }
 
-type Action @model {
+type Action @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   action: String
-  listItem: ListItem @connection(name:"ListItemAction")
+  listItem: ListItem @connection(name: "ListItemAction")
 }

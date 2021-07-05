@@ -4,29 +4,16 @@
       "addmissingownerfields": true,
       "validatetypenamereservedwords": true,
       "useexperimentalpipelinedtransformer": false,
-      "enableiterativegsiupdates": true,
-      "secondarykeyasgsi": true,
-      "skipoverridemutationinputtypes": true
+      "enableiterativegsiupdates": false
     },
     "frontend-ios": {
       "enablexcodeintegration": true
     },
     "auth": {
-      "enablecaseinsensitivity": true,
-      "useinclusiveterminology": true,
-      "breakcirculardependency": true
+      "enablecaseinsensitivity": true
     },
     "codegen": {
-      "useappsyncmodelgenplugin": true,
-      "usedocsgeneratorplugin": true,
-      "usetypesgeneratorplugin": true,
-      "cleangeneratedmodelsdirectory": true,
-      "retaincasestyle": true,
-      "addtimestampfields": true,
-      "handlelistnullabilitytransparently": true
-    },
-    "appsync": {
-      "generategraphqlpermissions": true
+      "useappsyncmodelgenplugin": true
     }
   }
 }

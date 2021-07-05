@@ -7,6 +7,8 @@ export const getList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -15,11 +17,13 @@ export const getList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -34,11 +38,14 @@ export const listLists = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -55,11 +62,14 @@ export const getListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -67,11 +77,13 @@ export const getListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -91,14 +103,18 @@ export const listListItems = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -118,17 +134,22 @@ export const getAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -149,11 +170,46 @@ export const listActions = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
+    }
+  }
+`;
+export const searchLists = /* GraphQL */ `
+  query SearchLists(
+    $filter: SearchableListFilterInput
+    $sort: SearchableListSortInput
+    $limit: Int
+    $nextToken: String
+    $from: Int
+  ) {
+    searchLists(
+      filter: $filter
+      sort: $sort
+      limit: $limit
+      nextToken: $nextToken
+      from: $from
+    ) {
+      items {
+        id
+        title
+        description
+        imageKey
+        slug
+        listItems {
+          nextToken
+        }
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+      total
     }
   }
 `;

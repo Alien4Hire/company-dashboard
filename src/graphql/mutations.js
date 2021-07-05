@@ -10,6 +10,8 @@ export const createList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -18,11 +20,13 @@ export const createList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -35,6 +39,8 @@ export const updateList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -43,11 +49,13 @@ export const updateList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -60,6 +68,8 @@ export const deleteList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -68,11 +78,13 @@ export const deleteList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -90,11 +102,14 @@ export const createListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -102,11 +117,13 @@ export const createListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -124,11 +141,14 @@ export const updateListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -136,11 +156,13 @@ export const updateListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -158,11 +180,14 @@ export const deleteListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -170,11 +195,13 @@ export const deleteListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -195,17 +222,22 @@ export const createAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -226,17 +258,22 @@ export const updateAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -257,17 +294,22 @@ export const deleteAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;

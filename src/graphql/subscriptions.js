@@ -7,6 +7,8 @@ export const onCreateList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -15,11 +17,13 @@ export const onCreateList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -29,6 +33,8 @@ export const onUpdateList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -37,11 +43,13 @@ export const onUpdateList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -51,6 +59,8 @@ export const onDeleteList = /* GraphQL */ `
       id
       title
       description
+      imageKey
+      slug
       listItems {
         items {
           id
@@ -59,17 +69,19 @@ export const onDeleteList = /* GraphQL */ `
           done
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateListItem = /* GraphQL */ `
-  subscription OnCreateListItem {
-    onCreateListItem {
+  subscription OnCreateListItem($owner: String!) {
+    onCreateListItem(owner: $owner) {
       id
       title
       quantity
@@ -78,11 +90,14 @@ export const onCreateListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -90,17 +105,19 @@ export const onCreateListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateListItem = /* GraphQL */ `
-  subscription OnUpdateListItem {
-    onUpdateListItem {
+  subscription OnUpdateListItem($owner: String!) {
+    onUpdateListItem(owner: $owner) {
       id
       title
       quantity
@@ -109,11 +126,14 @@ export const onUpdateListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -121,17 +141,19 @@ export const onUpdateListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteListItem = /* GraphQL */ `
-  subscription OnDeleteListItem {
-    onDeleteListItem {
+  subscription OnDeleteListItem($owner: String!) {
+    onDeleteListItem(owner: $owner) {
       id
       title
       quantity
@@ -140,11 +162,14 @@ export const onDeleteListItem = /* GraphQL */ `
         id
         title
         description
+        imageKey
+        slug
         listItems {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       actions {
         items {
@@ -152,17 +177,19 @@ export const onDeleteListItem = /* GraphQL */ `
           action
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateAction = /* GraphQL */ `
-  subscription OnCreateAction {
-    onCreateAction {
+  subscription OnCreateAction($owner: String!) {
+    onCreateAction(owner: $owner) {
       id
       action
       listItem {
@@ -174,23 +201,28 @@ export const onCreateAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateAction = /* GraphQL */ `
-  subscription OnUpdateAction {
-    onUpdateAction {
+  subscription OnUpdateAction($owner: String!) {
+    onUpdateAction(owner: $owner) {
       id
       action
       listItem {
@@ -202,23 +234,28 @@ export const onUpdateAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteAction = /* GraphQL */ `
-  subscription OnDeleteAction {
-    onDeleteAction {
+  subscription OnDeleteAction($owner: String!) {
+    onDeleteAction(owner: $owner) {
       id
       action
       listItem {
@@ -230,17 +267,22 @@ export const onDeleteAction = /* GraphQL */ `
           id
           title
           description
+          imageKey
+          slug
           createdAt
           updatedAt
+          owner
         }
         actions {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;

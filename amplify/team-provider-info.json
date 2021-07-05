@@ -1,19 +1,55 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-familyhelper-dev-182206-authRole",
-      "UnauthRoleArn": "arn:aws:iam::277302657457:role/amplify-familyhelper-dev-182206-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::277302657457:role/amplify-familyhelper-dev-182206-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-familyhelper-dev-182206-deployment",
-      "UnauthRoleName": "amplify-familyhelper-dev-182206-unauthRole",
-      "StackName": "amplify-familyhelper-dev-182206",
-      "StackId": "arn:aws:cloudformation:us-east-1:277302657457:stack/amplify-familyhelper-dev-182206/47b542c0-d3a8-11eb-a2f8-0ede49f38865",
-      "AmplifyAppId": "d1jiw8sfh71fm6"
+      "AuthRoleName": "amplify-familyhelper-dev-123846-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381100130943:role/amplify-familyhelper-dev-123846-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381100130943:role/amplify-familyhelper-dev-123846-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-familyhelper-dev-123846-deployment",
+      "UnauthRoleName": "amplify-familyhelper-dev-123846-unauthRole",
+      "StackName": "amplify-familyhelper-dev-123846",
+      "StackId": "arn:aws:cloudformation:us-east-2:381100130943:stack/amplify-familyhelper-dev-123846/dac4e640-4e1c-11eb-ad92-02656012557c",
+      "AmplifyAppId": "d3sb1on75f400s"
     },
     "categories": {
       "auth": {
-        "familyhelper9a0b4b7b": {}
+        "familyhelper33118859": {}
+      }
+    }
+  },
+  "sns": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-familyhelper-sns-94509-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381100130943:role/amplify-familyhelper-sns-94509-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381100130943:role/amplify-familyhelper-sns-94509-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-familyhelper-sns-94509-deployment",
+      "UnauthRoleName": "amplify-familyhelper-sns-94509-unauthRole",
+      "StackName": "amplify-familyhelper-sns-94509",
+      "StackId": "arn:aws:cloudformation:us-east-1:381100130943:stack/amplify-familyhelper-sns-94509/5edf9cc0-9721-11eb-96fe-0e30fc137e69",
+      "AmplifyAppId": "d3jg2z8xl6fgn3"
+    },
+    "categories": {
+      "auth": {
+        "familyhelper33118859": {}
+      }
+    }
+  },
+  "jem": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-familyhelper-jem-195108-authRole",
+      "UnauthRoleArn": "arn:aws:iam::277302657457:role/amplify-familyhelper-jem-195108-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::277302657457:role/amplify-familyhelper-jem-195108-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-familyhelper-jem-195108-deployment",
+      "UnauthRoleName": "amplify-familyhelper-jem-195108-unauthRole",
+      "StackName": "amplify-familyhelper-jem-195108",
+      "StackId": "arn:aws:cloudformation:us-east-2:277302657457:stack/amplify-familyhelper-jem-195108/df23a3c0-ddeb-11eb-a6ba-068aac37321e",
+      "AmplifyAppId": "d1npfi5gr4hqt2"
+    },
+    "categories": {
+      "auth": {
+        "familyhelper33118859": {}
       }
     }
   }
